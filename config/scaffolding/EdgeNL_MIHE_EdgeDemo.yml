@@ -1,0 +1,10 @@
+version: "1.0"
+info:
+  model: int-scaffold
+packages:
+- name: EdgeNL_MIHE_EdgeDemo
+  gitServerName: NL_MIHE_Github
+  gitUrl: https://github.com/elpinjo/EdgeNL_MIHE_EdgeDemo
+  gitUsername: elpinjo
+  gitToken: edge.scaffolding.EdgeNL_MIHE_EdgeDemo.NL_MIHE_Github.gitToken
+  gitBranch: main
