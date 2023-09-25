@@ -1,10 +1,200 @@
 version: "1.0"
 info:
   model: int-scaffold
+services:
+- serviceName: edge.nl_mihe_edgedemo.integrations:HelloWorld
+  packages:
+  - name: EdgeNL_MIHE_EdgeDemo
+    version: "1.0"
+  configurations:
+  - name: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql
+    properties:
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionEnabled
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.driverType
+      value: Postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.networkProtocol
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.transactionType
+      value: NO_TRANSACTION
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.trustStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.keyStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.datasourceClass
+      value: org.postgresql.ds.PGSimpleDataSource
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.otherProperties
+      value: loginTimeout=60;
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.user
+      value: postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.serverName
+      value: 192.168.25.5
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionManagerSettings.poolable
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.password
+      value: "{AES}uVPqhb6G9lTwFM49v4AMk0dCHCO2jWTi1gxuXVMQaiW49NEaSgLxOSAIrl0uHxkhATtvGs1z7sNqRHEibzup+2mK1wuN3U1rA1B0VhuZoUw="
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.portNumber
+      value: "5432"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.dbType
+      value: POSTGRESQL
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.databaseName
+      value: cdcatalog
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.0.0.0.473
+- serviceName: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Postgresql
+  packages:
+  - name: EdgeNL_MIHE_EdgeDemo
+    version: "1.0"
+  configurations:
+  - name: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql
+    properties:
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionEnabled
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.driverType
+      value: Postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.networkProtocol
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.transactionType
+      value: NO_TRANSACTION
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.trustStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.keyStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.datasourceClass
+      value: org.postgresql.ds.PGSimpleDataSource
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.otherProperties
+      value: loginTimeout=60;
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.user
+      value: postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.serverName
+      value: 192.168.25.5
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionManagerSettings.poolable
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.password
+      value: "{AES}uVPqhb6G9lTwFM49v4AMk0dCHCO2jWTi1gxuXVMQaiW49NEaSgLxOSAIrl0uHxkhATtvGs1z7sNqRHEibzup+2mK1wuN3U1rA1B0VhuZoUw="
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.portNumber
+      value: "5432"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.dbType
+      value: POSTGRESQL
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.databaseName
+      value: cdcatalog
+- serviceName: edge.nl_mihe_edgedemo.integrations:InsertIntoCDCatalog
+  packages:
+  - name: EdgeNL_MIHE_EdgeDemo
+    version: "1.0"
+  configurations:
+  - name: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql
+    properties:
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionEnabled
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.driverType
+      value: Postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.networkProtocol
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.transactionType
+      value: NO_TRANSACTION
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.trustStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.keyStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.datasourceClass
+      value: org.postgresql.ds.PGSimpleDataSource
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.otherProperties
+      value: loginTimeout=60;
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.user
+      value: postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.serverName
+      value: 192.168.25.5
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionManagerSettings.poolable
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.password
+      value: "{AES}aYrXC43dTWsDUHRWG5mhTA=="
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.portNumber
+      value: "5432"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.dbType
+      value: POSTGRESQL
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.databaseName
+      value: cdcatalog
+- serviceName: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:insertCd
+  packages:
+  - name: EdgeNL_MIHE_EdgeDemo
+    version: "1.0"
+  configurations:
+  - name: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql
+    properties:
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionEnabled
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.driverType
+      value: Postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.networkProtocol
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.transactionType
+      value: NO_TRANSACTION
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.trustStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.keyStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.datasourceClass
+      value: org.postgresql.ds.PGSimpleDataSource
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.otherProperties
+      value: loginTimeout=60;
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.user
+      value: postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.serverName
+      value: 192.168.25.5
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionManagerSettings.poolable
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.password
+      value: "{AES}aYrXC43dTWsDUHRWG5mhTA=="
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.portNumber
+      value: "5432"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.dbType
+      value: POSTGRESQL
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.databaseName
+      value: cdcatalog
+- serviceName: edge.nl_mihe_edgedemo.integrations:queryCds
+  packages:
+  - name: EdgeNL_MIHE_EdgeDemo
+    version: "1.0"
+  configurations:
+  - name: edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql
+    properties:
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.otherProperties
+      value: loginTimeout=60;
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.user
+      value: postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionEnabled
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.serverName
+      value: 192.168.25.5
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionManagerSettings.poolable
+      value: "false"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.password
+      value: "{AES}aYrXC43dTWsDUHRWG5mhTA=="
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.driverType
+      value: Postgres
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.portNumber
+      value: "5432"
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.dbType
+      value: POSTGRESQL
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.databaseName
+      value: cdcatalog
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.networkProtocol
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.transactionType
+      value: NO_TRANSACTION
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.trustStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.keyStore
+      value: ""
+    - name: artConnection.EdgeNL_MIHE_EdgeDemo.edge.nl_mihe_edgedemo.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Postgresql.connectionSettings.datasourceClass
+      value: org.postgresql.ds.PGSimpleDataSource
 packages:
 - name: EdgeNL_MIHE_EdgeDemo
-  gitServerName: NL_MIHE_Github
+  gitServerName: NL_MIHE_CdCatalog
   gitUrl: https://github.com/elpinjo/EdgeNL_MIHE_EdgeDemo
   gitUsername: elpinjo
-  gitToken: edge.scaffolding.EdgeNL_MIHE_EdgeDemo.NL_MIHE_Github.gitToken
+  gitToken: edge.scaffolding.EdgeNL_MIHE_EdgeDemo.NL_MIHE_CdCatalog.gitToken
   gitBranch: main

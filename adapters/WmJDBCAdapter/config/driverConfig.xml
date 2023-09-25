@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<driverDetails>
+    <database>
+        <name>POSTGRESQL</name>
+        <driver inUse="false" exists="true">
+            <name>Postgres</name>
+            <path>drivers/POSTGRESQL/Postgres</path>
+        </driver>
+    </database>
+</driverDetails>
